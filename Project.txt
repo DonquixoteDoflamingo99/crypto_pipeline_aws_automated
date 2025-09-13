@@ -1,86 +1,16 @@
-crypto-trading-pipeline/
-├── .vscode/
-│   ├── settings.json
-│   ├── launch.json
-│   └── extensions.json
-├── .github/
-│   └── workflows/
-│       └── crypto-pipeline-deploy.yml
+crypto-pipeline/
 ├── src/
-│   ├── ingestion/
-│   │   ├── __init__.py
-│   │   ├── lambda_function.py
-│   │   └── crypto_apis.py
-│   ├── processing/
-│   │   ├── __init__.py
-│   │   ├── crypto_stream_processor.py
-│   │   ├── technical_indicators.py
-│   │   └── data_quality.py
-│   ├── analytics/
-│   │   ├── __init__.py
-│   │   ├── glue_catalog_job.py
-│   │   └── athena_queries.sql
-│   └── monitoring/
-│       ├── __init__.py
-│       ├── custom_metrics.py
-│       └── grafana_setup.py
-├── terraform/
-│   ├── main.tf
-│   ├── variables.tf
-│   ├── outputs.tf
-│   ├── terraform.tfvars.example
-│   └── modules/
-│       ├── kinesis/
-│       │   ├── main.tf
-│       │   ├── variables.tf
-│       │   └── outputs.tf
-│       ├── emr/
-│       │   ├── main.tf
-│       │   ├── variables.tf
-│       │   └── outputs.tf
-│       └── lambda/
-│           ├── main.tf
-│           ├── variables.tf
-│           └── outputs.tf
+│   ├── ingestion/          # Lambda functions for data ingestion
+│   ├── processing/         # Spark streaming applications
+│   ├── analytics/          # Glue jobs and Athena queries
+│   └── monitoring/         # Custom metrics and dashboards
+├── terraform/              # Infrastructure as Code
 ├── airflow/
-│   └── dags/
-│       ├── __init__.py
-│       └── crypto_pipeline_dag.py
+│   └── dags/              # Airflow DAG definitions
 ├── tests/
-│   ├── __init__.py
-│   ├── unit/
-│   │   ├── __init__.py
-│   │   ├── test_crypto_processor.py
-│   │   └── test_lambda_ingestion.py
-│   ├── integration/
-│   │   ├── __init__.py
-│   │   └── test_pipeline_integration.py
-│   └── smoke/
-│       ├── __init__.py
-│       └── test_deployment.py
-├── docker/
-│   ├── spark/
-│   │   └── Dockerfile
-│   └── lambda/
-│       └── Dockerfile
-├── docs/
-│   ├── architecture-diagram.png
-│   ├── api-documentation.md
-│   └── deployment-guide.md
-├── scripts/
-│   ├── deploy.sh
-│   ├── setup-dev.sh
-│   └── bootstrap_emr.sh
-├── config/
-│   ├── grafana/
-│   │   └── dashboard.json
-│   └── cloudwatch/
-│       └── alarms.json
-├── requirements.txt
-├── requirements-dev.txt
-├── requirements-lambda.txt
-├── .env.example
-├── .gitignore
-├── README.md
-├── LICENSE
-└── pyproject.toml
+│   ├── unit/              # Unit tests
+│   ├── integration/       # Integration tests
+│   └── smoke/             # Deployment verification tests
+├── docker/                # Docker configurations
+├── docs/                  # Documentation
+└── .github/workflows/     # CI/CD pipelines

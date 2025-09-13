@@ -1,0 +1,73 @@
+# Real-Time Cryptocurrency Trading Analytics Pipeline
+
+[![Build Status](https://github.com/your-repo/crypto-pipeline/workflows/CI/badge.svg)](https://github.com/your-repo/crypto-pipeline/actions)
+[![Coverage Status](https://codecov.io/gh/your-repo/crypto-pipeline/branch/main/graph/badge.svg)](https://codecov.io/gh/your-repo/crypto-pipeline)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Overview
+
+A comprehensive, production-ready data engineering pipeline that processes real-time cryptocurrency trading data using modern big data technologies. This project demonstrates enterprise-level data engineering practices with AWS cloud services, Apache Spark, and real-time streaming analytics.
+
+## Architecture
+
+![Architecture Diagram](docs/architecture-diagram.png)
+
+### Key Components:
+- **Data Ingestion**: AWS Lambda + Kinesis Data Streams
+- **Stream Processing**: Apache Spark Structured Streaming on EMR
+- **Data Storage**: S3 Data Lake + DynamoDB
+- **Analytics**: AWS Glue + Amazon Athena
+- **Orchestration**: Apache Airflow (MWAA)
+- **Monitoring**: CloudWatch + Grafana
+- **Infrastructure**: Terraform (IaC)
+
+## Technologies Used
+
+### Big Data & Processing
+- **Apache Spark 3.4+** - Distributed computing and stream processing
+- **PySpark** - Python API for Spark applications
+- **Spark Structured Streaming** - Real-time data processing
+- **Apache Airflow** - Workflow orchestration
+
+### Cloud Services (AWS)
+- **Amazon Kinesis** - Real-time data streaming
+- **AWS EMR** - Managed Spark clusters
+- **Amazon S3** - Data lake storage
+- **Amazon DynamoDB** - NoSQL database for real-time data
+- **AWS Glue** - Data catalog and ETL
+- **Amazon Athena** - Serverless SQL analytics
+- **AWS Lambda** - Serverless data ingestion
+- **Amazon MWAA** - Managed Apache Airflow
+
+### DevOps & Infrastructure
+- **Terraform** - Infrastructure as Code
+- **Docker** - Containerization
+- **GitHub Actions** - CI/CD pipeline
+- **CloudWatch** - Monitoring and logging
+
+### Data Sources
+- **Binance API** - Cryptocurrency price data
+- **CoinGecko API** - Market data and metrics
+
+## Features
+
+### Real-Time Analytics
+- Live cryptocurrency price monitoring
+- Technical indicators (RSI, MACD, Moving Averages)
+- Anomaly detection using statistical methods
+- Market volatility analysis
+- Cross-asset correlation analysis
+
+### Data Engineering Best Practices
+- **Lambda Architecture** - Batch and stream processing layers
+- **Schema Evolution** - Handle API changes gracefully
+- **Data Quality Checks** - Automated validation and monitoring
+- **Exactly-Once Processing** - Idempotent data processing
+- **Auto-scaling** - EMR clusters scale with data volume
+
+### Production Features
+- **High Availability** - Multi-AZ deployment
+- **Disaster Recovery** - Automated backups and recovery
+- **Security** - IAM roles, VPC, encryption at rest/transit
+- **Cost Optimization** - Spot instances, lifecycle policies
+- **Monitoring & Alerting** - Custom metrics and dashboards
